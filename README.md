@@ -55,11 +55,22 @@ ch341 1-1:1.0: ch341-uart converter detected
 usb 1-1: ch341-uart converter now attached to ttyUSB0
 ```
 
+# Powering readers
+
+Wiegand readers need typically to be powered with sth like 9 to 15V while the USB stick only delivers the 5V from USB.
+
+You can easily add a step up converter such as this tiny one from Aliexpress (search for DD06AJSB)
+
+<img src="./DD06AJSB-DC-3-3V-3-7V-5V-to-6V-9V-12V-Adjustable-Step-Up-Boost-Voltage.jpg" alt="step-up" width="300"/>
 
 
 # Setting the device under programming mode
 
-* press button and insert USB stick
+To make it easier, I soldered a tiny button between the 2 pads to shortcut (GND & square pad).
+
+<img src="./w2usb_button.jpg" alt="button" width="300"/>
+
+* press button (or shortcut these 2 pads) and insert USB stick
 * watch lsusb for `Bus xxx Device xxx: ID 4348:55e0 WinChipHead`
 
 # Flashing under Linux
